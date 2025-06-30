@@ -10,7 +10,7 @@ import { SOLUTION_ROUTES } from '@features/solution/routes/solution-routes.route
 import { NotFoundPages } from '@shared/components/pages/not-found/not-found.pages';
 
 export const routes: Routes = [
-    { path: '',  pathMatch: 'full', component:  HomePage},
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     ...HOME_ROUTES,
     ...COMPANY_ROUTES,
     ...CONTACT_ROUTES,
