@@ -1,0 +1,21 @@
+export const ROUTER_SYSTEM = {
+    home: 'home',
+    company: 'sobre',
+    contact: 'contato',
+    customerCenter: 'central-do-cliente',
+    solution: 'solucoes',
+    blog: 'blog',
+    solution_child_fantury: 'fantury',
+    pdv: 'pdv',
+    pdvweb: 'pdv-web',
+    mobile: 'mobile',
+    coletor: 'coletor',
+    chef: 'chef',
+    cotacao: 'cotacao',
+    contador: 'contador',
+    catalogo: 'catalogo',
+    partner: 'parcerias',
+    partner_child_tecnospeed: 'tecnospeed',
+    partner_child_scanntech: 'scanntech',
+    content: 'conteudo'
+} as const

@@ -1,0 +1,126 @@
+@defer (on timer(1300)) {
+<nav>
+    @if (this.layout.layoutDesktop()) {
+    <a>
+        <span (click)="scrollTop()" class="nav-text" [routerLink]="'/'+routes.home"
+            routerLinkActive="menu-active-route">Home</span>
+    </a>
+    <a>
+        <span (click)="scrollTop()" class="nav-text"
+            [routerLink]="'/'+routes.solution+'/'+routes.solution_child_fantury"
+            routerLinkActive="menu-active-route">Soluções</span>
+    </a>
+    <a>
+        <span (click)="scrollTop()" class="nav-text" [routerLink]="'/'+routes.partner"
+            routerLinkActive="menu-active-route">Integrações e Parcerias</span>
+    </a>
+    <a>
+        <span (click)="scrollTop()" class="nav-text" [routerLink]="'/'+routes.company"
+            routerLinkActive="menu-active-route">Sobre</span>
+    </a>
+    <a>
+        <span (click)="scrollTop()" class="nav-text" [routerLink]="'/'+routes.blog"
+            routerLinkActive="menu-active-route">Blog</span>
+    </a>
+    <a>
+        <span (click)="scrollTop()" class="nav-text" [routerLink]="'/'+routes.customerCenter"
+            routerLinkActive="menu-active-route">Central do Cliente</span>
+    </a>
+    <a>
+        <span (click)="scrollTop()" class="nav-text" [routerLink]="'/'+routes.contact"
+            routerLinkActive="menu-active-route">Contato</span>
+    </a>
+    }
+    @if (this.layout.layoutMobile()) {
+    <details [open]="detailControlOpen()" (click)="[detailClicked(),scrollTop()]">
+        <summary>
+
+        </summary>
+
+        <li>
+            <a>
+                <span class="nav-text-mobile" [routerLink]="'/'+routes.home"
+                    routerLinkActive="menu-active-route-mobile">Home</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <span class="nav-text-mobile" [routerLink]="'/'+routes.solution+'/'+routes.solution_child_fantury"
+                    routerLinkActive="menu-active-route-mobile">Soluções</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <span class="nav-text-mobile" [routerLink]="'/'+routes.partner"
+                    routerLinkActive="menu-active-route-mobile">Integrações e Parcerias</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <span class="nav-text-mobile" [routerLink]="'/'+routes.company"
+                    routerLinkActive="menu-active-route-mobile">Sobre</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <span class="nav-text-mobile" [routerLink]="'/'+routes.blog"
+                    routerLinkActive="menu-active-route-mobile">Blog</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <span class="nav-text-mobile" [routerLink]="'/'+routes.customerCenter"
+                    routerLinkActive="menu-active-route-mobile">Central do Cliente</span>
+            </a>
+        </li>
+        <li>
+            <a>
+                <span class="nav-text-mobile" [routerLink]="'/'+routes.contact"
+                    routerLinkActive="menu-active-route-mobile">Contato</span>
+            </a>
+        </li>
+
+    </details>
+    }
+</nav>
+}@placeholder {
+<nav>
+    @if (this.layout.layoutDesktop()) {
+    <a>
+        <span class="nav-text">
+            <div class="skeleton h-4 w-11"></div>
+        </span>
+    </a>
+    <a>
+        <span class="nav-text">
+            <div class="skeleton h-4 w-15"></div>
+        </span>
+    </a>
+    <a>
+        <span class="nav-text">
+            <div class="skeleton h-4 w-40"></div>
+        </span>
+    </a>
+    <a>
+        <span class="nav-text">
+            <div class="skeleton h-4 w-12"></div>
+        </span>
+    </a>
+    <a>
+        <span class="nav-text">
+            <div class="skeleton h-4 w-10"></div>
+        </span>
+    </a>
+    <a>
+        <span class="nav-text">
+            <div class="skeleton h-4 w-30"></div>
+        </span>
+    </a>
+    <a>
+        <span class="nav-text">
+            <div class="skeleton h-4 w-15"></div>
+        </span>
+    </a>
+    }
+</nav>
+}

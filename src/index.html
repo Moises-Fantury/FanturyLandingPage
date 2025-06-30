@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <title>Fantury Software</title>
+  <meta charset="utf-8">  
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Moisés Neto Silva Santos / Fantury Software">
+  <meta name="geo.postion" content="-16.3780864,-39.5872476">
+  <meta name="robots" content="index,follow,max-image-preview:large"/>
+  <meta name="google" content="notranslate"/>
+  <meta name="geo.region" content="BR-BA">
+  <meta property="og:locale" content="pt_BR">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link href="https://unpkg.com/phosphor-icons/src/css/phosphor.css" rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
+
+  <script src="https://webchat-api.sonax.net.br/assets/js/vendor/markdown/markdown.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/vendor/socket4/socket.io.min.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/core/jsCustom.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/core/custom.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/core/socket.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/core/sessions.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/core/init.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/form.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/rating.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/chatting/starting.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/chatting/messaging.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/chatting/closing.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/files.js"></script>
+  <script src="https://webchat-api.sonax.net.br/assets/js/menu.js"></script>
+</head>
+
+<body>
+  <app-root></app-root>
+  <script src="https://webchat-api.sonax.net.br/chat.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      plugLoadChat({
+        id: '6179b0df98846d7526ef4f55', // NÃO ATERAR
+        tenant: '61312adda31bb018a360b202', // NÃO ATERAR
+        bot: '61312d073878a319d0d26b5d', // NÃO ALTERAR
+        hash: 'd16135bb4f6b8dfb2d211e0c79710b64dcf6e678', // NÃO ALTERAR
+        ws: 'https://api-chat.sonax.net.br', // NÃO ALTERAR
+        widthSize: '370px', // Largura do chat
+        heightSize: '70%', // Altura do chat
+        showOpen: 'false', // Abrir ao carregar [true / false]
+        showOpenMessage: 'Olá, em que posso ajudar?', // Mensagem carregada ao abrir o chat automaticamente
+        header: { // Cabeçalho
+          title: 'WEB CHAT', // Título do cabeçalho
+          backgroundColor: '#4682b4', // Cor de fundo do cabeçalho
+          textColorBackground: '#ffffff', // Cor do texto do cabeçalho
+          botAvatarUrl: 'https://www.fantury.com.br/fanturyerp/imagemChat/Fantury.png' // Url do avatar de cabeçalho
+        },
+        button: { // Botão de abertura
+          chatButtonLogoUrl: 'https://www.fantury.com.br/fanturyerp/imagemChat/Fantury.png', // Logo do botão
+          chatButtonColor: '#4682b4', // Cor de fundo do botão
+          chatButtonTextColor: '#ffffff', // Cor do texto do botão mobile
+          chatButtonText: 'Posso ajudar?'
+        },
+        botName: 'Fátima', // Nome do seu Robô
+        extraStyle: '', // Estilo personalizado para substituir o estilo padrão
+        webchatUrl: 'https://webchat-api.sonax.net.br' // Estilo personalizado para substituir o estilo padrão
+      })
+    });
+  </script>
+  <div class="plugSocialChat">
+    <div class="chat_container" id="plugChatOpen"
+      style="max-width: 400px; max-height: 80%; display: none; --animate-duration: 0.5s;">
+      <div class="top_menu" style="background-color: rgb(70, 130, 180); color: rgb(255, 255, 255);">
+        <div class="buttons">
+          <a style="display: none;" id="modalPlugCloseProtocolLink" onclick="buttonCloseProtocolChat()"
+            title="Encerrar Atendimento">
+            <i class="material-icons top-buttons" style="color: rgb(255, 255, 255);">close</i>
+          </a>
+          <a class="minus" onclick="closeChat()" title="Minimizar Atendimento">
+            <i class="material-icons top-buttons" style="color: rgb(255, 255, 255);">remove</i>
+          </a>
+        </div>
+        <div class="avatar plugSocialChat_avatar"
+          style="background-image: url(&quot;https://www.fantury.com.br/fanturyerp/imagemChat/Fantury.png&quot;);">
+        </div>
+        <div class="title">
+          <div class="plugSocialChat_title">WEB CHAT</div>
+          <div id="agente" class="agente"></div>
+        </div>
+      </div>
+      <!--INICIO RESPOSTA CLOSE -->
+      <div id="modalReplyClose" class="modalPlug">
+        <p>
+          Agradecemos o seu contato.<br><br>
+          OBRIGADO!
+        </p>
+      </div>
+      <!-- FIM RESPOSTA CLOSE -->
+
+      <div class="chat_window" id="chatWindow" style="display: block;">
+        <!-- INICIO FORM -->
+        <div id="modalPlugFormProtocol" class="modalPlug" style="overflow: auto; overflow-y: scroll">
+          <h3 class="plugSocialChat_formTitle">Preencha o formulário para atendimento</h3>
+          <form id="plugFormFields" class="formInicial" style="width: 80%; margin: 0 auto; text-align: left;"
+            onsubmit="return false">
+          </form><br>
+        </div>
+
+        <!-- <ul class="plugSocial_messages" style="height: calc(100% - 80px)"></ul> -->
+        <ul class="plugSocial_messages"></ul>
+
+        <!-- <div class="guest-typing" style="position: relative; bottom: 7px;"> -->
+        <div class="guest-typing">
+          <!--*ngIf="visitorTyping"-->
+          <div class="wavy-loader">
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="dots"></span>
+            <span class="loader-msg"></span>
+          </div>
+        </div>
+
+        <div class="uploading-file"></div>
+
+        <div id="ratingChat"
+          style="visibility: visible; display: none; background-color: rgb(70, 130, 180); color: rgb(255, 255, 255);">
+          <div class="rating-box" style="display: flex; padding-top: 0; padding-bottom: 0;">
+            <div class="rate-question"
+              style="font-size: 12px;display: flex;align-items: center;padding: 0;margin-top: 3px;">
+              Avalie nosso atendimento:
+            </div>
+
+            <div class="plugRating" style="padding: 0px">
+              <div class="feedback">
+                <div class="rating" style="margin: 0;">
+                  <input type="radio" name="rating" id="rating-chat-5" value="5" class="avaliar">
+                  <label for="rating-chat-5" style="width: 30px !important;"></label>
+                  <input type="radio" name="rating" id="rating-chat-4" value="4" class="avaliar">
+                  <label for="rating-chat-4" style="width: 30px !important;"></label>
+                  <input type="radio" name="rating" id="rating-chat-3" value="3" class="avaliar">
+                  <label for="rating-chat-3" style="width: 30px !important;"></label>
+                  <input type="radio" name="rating" id="rating-chat-2" value="2" class="avaliar">
+                  <label for="rating-chat-2" style="width: 30px !important;"></label>
+                  <input type="radio" name="rating" id="rating-chat-1" value="1" class="avaliar">
+                  <label for="rating-chat-1" style="width: 30px !important;"></label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="chatMenu">
+          <ul>
+            <li>
+              <label for="selecao-arquivo-plug">
+                <a>
+                  <i class="fa fa-paperclip"></i> Enviar Arquivo <small>(Max: 10Mb)</small>
+                </a>
+              </label>
+            </li>
+            <input id="selecao-arquivo-plug" type="file">
+            <li>
+              <a><i class="fa fa-microphone" onclick="recordStop();"></i>
+                Gravar Áudio</a>
+            </li>
+          </ul>
+        </div> <!-- Menu Upload e Áudio -->
+
+        <div id="audioSend">
+          <span class="divAudioPlayer"></span>
+          <span class="sendAudioControls" style="display: none;">
+            <button type="button" class="btn btn-audioSend">ENVIAR</button>
+            <button type="button" class="btn" onclick="openAudioSend()">CANCELAR</button>
+          </span>
+          <div>
+            <a class="recordTime" onclick="recordStop()">
+              <img src="https://webchat-api.sonax.net.br/assets/img/recording.gif">
+              <i class="fa fa-stop-circle" aria-hidden="true"></i> Parar Gravação
+            </a>
+          </div>
+          <div style="color: #3f3f3f; font-size: 15px;">
+            <div>O áudio deve ter no máximo 45 segundos</div>
+            <div><small>Se você precisar de mais tempo, grave vários áudios</small></div>
+          </div>
+        </div>
+
+        <div class="chatEmoji">
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😃"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f603.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😉"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f609.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😂"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f602.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="🤔"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f914.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😷"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f637.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😲"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f632.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😥"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f625.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😭"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f62d.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😤"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f624.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="😡"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f621.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="👍"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f44d.svg"></div>
+          <div class="emojicon emojicon-img"><img draggable="false" role="img" class="emoji" alt="👏"
+              src="https://s.w.org/images/core/emoji/14.0.0/svg/1f44f.svg"></div>
+        </div>
+
+        <!-- Caixa de escrita -->
+        <div class="bottom_wrapper clearfix" style="display: block;">
+          <div class="menuIcons">
+            <div id="divBtnChatMenu" class="seletorPlug">
+              <span class="plugSocial-btn-icon" onclick="openChatMenu()">
+                <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+              </span>
+            </div>
+            <!--
+
+            <a onclick="openChatEmoji()"><i class="fa fa-smile-o"></i></a>
+          -->
+            <div id="divBtnChatEmoji" class="seletorPlug">
+            </div>
+          </div>
+          <div class="message_input_wrapper">
+            <textarea class="message_input" rows="2" placeholder="Escreva sua mensagem..."></textarea>
+            <!--input class="message_input" placeholder="Escreva sua mensagem..." /-->
+          </div>
+          <div class="send_message">
+            <a><i class="fa fa-paper-plane-o"></i></a>
+          </div>
+        </div>
+        <!-- /Caixa de escrita -->
+
+        <div id="avisoReconectando" class=""
+          style="background: silver; text-align: center; font-size: 1.4em; color: rgb(51, 51, 51); display: none;">
+          <div style=""><img src="https://webchat-api.sonax.net.br/assets/img/iconLoading.svg" alt=""
+              style="width: 50px;"></div>
+          <span style="margin-top: 12px;">Reestabelecendo conexão, só um instante</span>
+        </div>
+
+      </div>
+
+      <!--INICIO CLOSE-->
+      <div id="modalPlugCloseProtocol" class="modalPlug">
+        <div class="rating-box" style="position: relative; top: 15%">
+          <div class="rate-question">Como você avalia o nosso atendimento?</div>
+
+          <div class="plugRating">
+            <div class="feedback">
+              <div class="rating">
+                <input type="radio" name="rating" id="rating-end-5" value="5" class="avaliar">
+                <label for="rating-end-5"></label>
+                <input type="radio" name="rating" id="rating-end-4" value="4" class="avaliar">
+                <label for="rating-end-4"></label>
+                <input type="radio" name="rating" id="rating-end-3" value="3" class="avaliar">
+                <label for="rating-end-3"></label>
+                <input type="radio" name="rating" id="rating-end-2" value="2" class="avaliar">
+                <label for="rating-end-2"></label>
+                <input type="radio" name="rating" id="rating-end-1" value="1" class="avaliar">
+                <label for="rating-end-1"></label>
+              </div>
+            </div>
+          </div>
+          <p style="text-align: center;">A sua opinião é muito importante.</p>
+
+          <br>
+
+          <center>
+            <a id="backToChat" class="plugButton" onclick="notCloseProtocolChat()">Continuar Atendimento</a>
+          </center>
+        </div>
+      </div>
+      <!-- FIM CLOSE-->
+
+    </div>
+    <div class="message_template">
+      <li class="plugSocial_message">
+        <div class="avatar">
+          <div class="name"></div>
+        </div>
+        <div class="text_wrapper">
+          <div class="text"></div>
+        </div>
+      </li>
+    </div>
+    <div class="payload_template">
+      <li class="plugSocial_message">
+        <div class="payload_wrapper">
+          <div class="text"></div>
+        </div>
+      </li>
+    </div>
+  </div>
+
+</body>
+
+</html>

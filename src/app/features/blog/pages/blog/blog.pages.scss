@@ -1,0 +1,12 @@
+:host {
+  display: block;
+
+  .p-container {
+    padding: 50px 25% 50px 25%;
+
+    @media (max-width: 599px) {
+      padding: 50px 15px 50px 15px;
+    }
+  }
+
+}

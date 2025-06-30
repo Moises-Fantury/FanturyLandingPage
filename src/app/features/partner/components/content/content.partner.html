@@ -1,0 +1,35 @@
+<daisy-hero-ui o_bgBase="bg-base-200" o_minHeight="min-h-10">
+    <div class="row column-xs gap-10" 
+    [class.p-50]="layout.layoutDesktop()"
+    [class.p-10]="layout.layoutMobile()"
+    >
+        <daisy-card-ui class="item" o_class="bg-base-200">
+            <figure>
+                <img src="./assets/image/scanntech.png" alt="scanntech" class="max-w-xs  rounded-md shadow-2xl">
+            </figure>
+            <header class="card-body items-center text-justify">
+                <p class="py-10" [style.font-size]="'18px'">
+                    A Scanntech é uma empresa líder em soluções de inteligência para o varejo e indústria, especializada
+                    em
+                    conectar pontos de venda a plataformas de dados e promoções. Com atuação em diversos países da
+                    América
+                    Latina, a Scanntech oferece ferramentas que geram valor para toda a cadeia comercial, do fornecedor
+                    ao
+                    consumidor.
+                </p>
+            </header>
+        </daisy-card-ui>
+        <daisy-card-ui class="item" o_class="bg-base-200">
+            <figure>
+                <img src="./assets/image/fiserv.png" alt="fiserv" class="max-w-xs  rounded-md shadow-2xl">
+            </figure>
+            <header class="card-body items-center text-justify">
+                <p class="py-6" [style.font-size]="'18px'">
+                    Conta com diversas funções de pagamentos com cartões, QRCode e apps, entre outros, além de vários
+                    serviços financeiros como recargas de crédito, correspondente bancário, fidelidade, etc.
+                </p>
+            </header>
+
+        </daisy-card-ui>
+    </div>
+</daisy-hero-ui>

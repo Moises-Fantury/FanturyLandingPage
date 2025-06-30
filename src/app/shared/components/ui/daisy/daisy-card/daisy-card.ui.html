@@ -1,0 +1,22 @@
+<section class="card" [class]="class()">
+    <ng-content select="figure"></ng-content>
+    <ng-content select="header"></ng-content>
+    
+    @if (img()) {
+    <figure>
+        <img [src]="img()" [alt]="alt()"/>
+    </figure>
+    }
+    
+    @if (title()) {
+        <div class="card-body">
+            <h2 class="card-title">{{title()}}</h2>
+            <p [class]="[textSize(), textHeight()]">
+                {{text()}}
+            </p>
+            <div class="card-actions justify-end" [hidden]="btnHidden()">
+                <button class="btn f-btn" (click)="eventClick.emit()">Saiba mais</button>
+            </div>
+        </div>
+    }
+</section>

@@ -1,0 +1,13 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+  #footer-a{
+    background-color: #414141;
+    color: #fafafa;
+  }
+  #footer-b{
+    background-color: #282a2b;
+    color: #fafafa;
+  }
+}

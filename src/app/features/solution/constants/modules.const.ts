@@ -1,0 +1,18 @@
+export const MODULES_ERP: string[] = [
+    'Gestão Comercial',
+    'Gestão Material',
+    'Gestão Financeiro',
+    'Gestão Manufatura',
+    'Gestão Serviço',
+    'Gestão Carga',
+    'Gestão Agro',
+    'Gestão Ótica',
+    'Cobrança - e',
+    'NF - e',
+    'NFC - e',
+    'MDF - e',
+    'SPED',
+    'AFV',
+    'Chef',
+    'Catalogo On-line',
+]

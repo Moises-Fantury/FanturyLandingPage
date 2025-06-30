@@ -1,0 +1,17 @@
+<contact-header />
+<wrapper-main-shared>
+    <div class="text-contact">
+        Dúvidas? Sugestões? Demonstrações? Entre em contato conosco. Conte com nosso suporte premium.
+        <br>
+        Qualidade no atendimento garantida
+    </div>
+    <contact-form />
+    @defer (on viewport(viewzap)) {
+        <contact-whatsapp/>
+    }
+    <span #viewzap></span>
+     @defer (on viewport(viemaps)) {
+         <app-google-maps />
+     }
+    <span #viemaps></span>
+</wrapper-main-shared>

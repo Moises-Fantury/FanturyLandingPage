@@ -1,0 +1,149 @@
+@defer{
+<footer id="footer-a" class="footer sm:footer-horizontal bg-base-300 text-base-content p-10 fade-in"
+    [class]="{'loaded': loader()}">
+    <aside>
+        <img src="https://www.fantury.com.br/wp-content/uploads/2019/12/logo-branco-rodape.png" alt="logo_footer">
+        <br>
+        <p>
+            Fantury Software LTDA.
+            <br />
+            Fornecendo tecnologia confiável desde 1998
+        </p>
+    </aside>
+    <nav>
+        <h6 class="footer-title">Institucional</h6>
+        <a class="link link-hover" [routerLink]="'/'+router.company" [fragment]="idValue.company">A Empresa</a>
+        <a class="link link-hover" [routerLink]="'/'+router.company" [fragment]="idValue.history">História</a>
+        <a class="link link-hover" [routerLink]="'/'+router.company" [fragment]="idValue.mission">Missão</a>
+        <a class="link link-hover" [routerLink]="'/'+router.company" [fragment]="idValue.meta">Meta</a>
+        <a class="link link-hover" [routerLink]="'/'+router.company" [fragment]="idValue.timeline">Linha do Tempo</a>
+    </nav>
+    <nav>
+        <h6 class="footer-title">Soluções</h6>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.solution_child_fantury" [fragment]="idValue.solution">Fantury ERP</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.pdv" [fragment]="idValue.pdv">Fantury PDV</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.pdvweb" [fragment]="idValue.pdvweb">Fantury PDV Web</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.contador" [fragment]="idValue.contador">Fantury Portal Contador</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.mobile" [fragment]="idValue.mobile">Fantury Mobile AFV</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.coletor" [fragment]="idValue.coletor">Fantury Coletor Web</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.cotacao" [fragment]="idValue.cotacao">Fantury Cotação Web</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.catalogo" [fragment]="idValue.catalogo">Fantury Catalogo</a>
+        <a class="link link-hover" [routerLink]="'/'+router.solution+'/'+router.chef" [fragment]="idValue.chef">Fantury Chef</a>        
+    </nav>
+    <nav>
+        <h6 class="footer-title">Endereço</h6>
+        <span>
+            Rua: Joaquim Alves Pereira, 500 <br>
+            Centro - Eunápolis/BA - 45820-171
+        </span>
+        <br>
+        <h6 class="footer-title">Telefones</h6>
+        <span>(73) 3281-6240</span>
+        <span>(73) 3281-5367</span>
+        <span>(73) 98861-0165 - Agendamentos</span>
+        <span>(73) 3281-1107</span>
+        <span>(73) 99803-8969 - Comercial</span>
+        <br>
+        <h6 class="footer-title">E-mail</h6>
+        <span>{{'suporte@fantury.com.br'}}</span>
+        <span>{{'comercial@fantury.com.br'}}</span>
+    </nav>
+    <nav>
+        <h6 class="footer-title">Social</h6>
+        <div class="grid grid-flow-col gap-4">
+            <a target="_blank" href="https://www.facebook.com/fanturysoftware/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa" viewBox="0 0 256 256">
+                    <path
+                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z">
+                    </path>
+                </svg>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/channel/UCuz0w5PX7SNKfp7Z62jSJEQ">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa" viewBox="0 0 256 256">
+                    <path
+                        d="M164.44,121.34l-48-32A8,8,0,0,0,104,96v64a8,8,0,0,0,12.44,6.66l48-32a8,8,0,0,0,0-13.32ZM120,145.05V111l25.58,17ZM234.33,69.52a24,24,0,0,0-14.49-16.4C185.56,39.88,131,40,128,40s-57.56-.12-91.84,13.12a24,24,0,0,0-14.49,16.4C19.08,79.5,16,97.74,16,128s3.08,48.5,5.67,58.48a24,24,0,0,0,14.49,16.41C69,215.56,120.4,216,127.34,216h1.32c6.94,0,58.37-.44,91.18-13.11a24,24,0,0,0,14.49-16.41c2.59-10,5.67-28.22,5.67-58.48S236.92,79.5,234.33,69.52Zm-15.49,113a8,8,0,0,1-4.77,5.49c-31.65,12.22-85.48,12-86,12H128c-.54,0-54.33.2-86-12a8,8,0,0,1-4.77-5.49C34.8,173.39,32,156.57,32,128s2.8-45.39,5.16-54.47A8,8,0,0,1,41.93,68c30.52-11.79,81.66-12,85.85-12h.27c.54,0,54.38-.18,86,12a8,8,0,0,1,4.77,5.49C221.2,82.61,224,99.43,224,128S221.2,173.39,218.84,182.47Z">
+                    </path>
+                </svg>
+            </a>
+            <a target="_blank" href="https://www.instagram.com/fanturysoftware/">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa" viewBox="0 0 256 256">
+                    <path
+                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z">
+                    </path>
+                </svg>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/company/fanturysoftware?trk=tyah">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#fafafa" viewBox="0 0 256 256">
+                    <path
+                        d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z">
+                    </path>
+                </svg>
+            </a>
+        </div>
+    </nav>
+</footer>
+
+<footer id="footer-b" class="footer sm:footer-horizontal footer-center text-base-content p-4">
+    <aside>
+        <p>Copyright © {{date}} - Todos os direitos reservados.</p>
+    </aside>
+</footer>
+}@placeholder (minimum 1300ms) {
+<footer class="footer sm:footer-horizontal text-base-content p-10">
+    <aside class="flex w-52 flex-col gap-4">
+        <div class="skeleton h-15 w-65"></div>
+        <br>
+        <div class="flex flex-col gap-4">
+            <div class="skeleton h-4 w-40"></div>
+            <div class="skeleton h-4 w-80"></div>
+        </div>
+    </aside>
+    <nav class="flex flex-col gap-4">
+        <div class="skeleton h-4 w-40"></div>
+        <div class="skeleton h-4 w-25"></div>
+        <div class="skeleton h-4 w-20"></div>
+        <div class="skeleton h-4 w-15"></div>
+        <div class="skeleton h-4 w-35"></div>
+        <div class="skeleton h-4 w-30"></div>
+    </nav>
+    <nav class="flex flex-col gap-4">
+        <div class="skeleton h-4 w-30"></div>
+        <div class="skeleton h-4 w-32"></div>
+        <div class="skeleton h-4 w-32"></div>
+        <div class="skeleton h-4 w-45"></div>
+        <div class="skeleton h-4 w-42"></div>
+        <div class="skeleton h-4 w-50"></div>
+        <div class="skeleton h-4 w-38"></div>
+        <div class="skeleton h-4 w-39"></div>
+        <div class="skeleton h-4 w-40"></div>
+    </nav>
+    <nav>
+        <div class="flex flex-col gap-4">
+            <div class="skeleton h-4 w-30"></div>
+            <div class="skeleton h-4 w-45"></div>
+            <div class="skeleton h-4 w-50"></div>
+        </div>
+        <br>
+        <div class="flex flex-col gap-4">
+            <div class="skeleton h-4 w-20"></div>
+            <div class="skeleton h-4 w-30"></div>
+            <div class="skeleton h-4 w-30"></div>
+            <div class="skeleton h-4 w-60"></div>
+            <div class="skeleton h-4 w-30"></div>
+            <div class="skeleton h-4 w-50"></div>
+        </div>
+        <br>
+        <div class="flex flex-col gap-4">
+            <div class="skeleton h-4 w-15"></div>
+            <div class="skeleton h-4 w-40"></div>
+            <div class="skeleton h-4 w-42"></div>
+        </div>
+    </nav>
+</footer>
+
+<footer class="footer sm:footer-horizontal footer-center bg-base-300 text-base-content p-4">
+    <div class="flex flex-col gap-4">
+        <div class="skeleton h-4 w-90"></div>
+    </div>
+</footer>
+}

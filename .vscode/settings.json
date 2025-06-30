@@ -1,0 +1,27 @@
+{
+  "angular-schematics.schematicsDefaultOptions": {
+      "angular-*": {
+          "style": "scss"
+      }
+  },
+
+  "material-icon-theme.folders.associations": {
+      "directives": "tools",
+      "directive": "tools",
+      "angular-material": "angular",
+      "hybrid": "vm",
+      "currency-mask": "lib",
+      "repository": "database",
+      "ui": "components",
+      "features": "components",
+      "custom-rxjs": "lib",
+      "store": "ngrx-store",
+      "state": "ngrx-state",
+      "facade": "node",
+      "mapper": "mappings",
+      "actions": "connection",
+    },
+    "material-icon-theme.files.associations": {
+      "*.rxjs.ts": "lib"
+    },
+}

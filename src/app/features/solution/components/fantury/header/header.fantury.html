@@ -1,0 +1,21 @@
+<daisy-hero-ui o_bgBase="bg-base-300" o_minHeight="min-h-120">
+    <daisy-hero-content [id]="idValue.solution">    
+      <img src="assets/image/mockup-fantury-erp.jpg" class="max-w-sm w-full rounded-lg shadow-2xl" />
+      <div class="p-4 text-justify">
+            <h1 class="text-5xl font-bold">Fantury ERP</h1>
+            <p class="py-6">
+                A Fantury oferece como solução de Gestão Empresarial o software Fantury ERP. Este compreende um conjunto
+                otimizado de ferramentas que, juntas, potencializam a gestão empresarial. As demais soluções oferecidas
+                pela empresa são todas ligadas ao Fantury ERP.
+            </p>
+            <p [hidden]="!content()">
+                O sistema de Gestão Empresarial ERP da Fantury foi desenvolvido para potencializar a gestão da sua
+                empresa. Com ele, você tem em mãos um software ERP completo e eficiente, que diminui processos, agiliza
+                a tomada de decisões e gera resultados precisos. Tudo isso de forma prática, automatizada, especialista
+                e simplificada, facilitando sua gestão. O software Fantury ERP é a solução segura para destacar o seu
+                negócio em um mercado competitivo, de forma planejada e efetiva.
+            </p>
+            <button class="btn f-btn" [hidden]="content()" (click)="enableContent()">Saiba mais</button>
+        </div>
+    </daisy-hero-content>
+</daisy-hero-ui>

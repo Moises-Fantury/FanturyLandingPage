@@ -1,0 +1,23 @@
+:host {
+  display: block;
+
+    .card-modulo {
+    
+    border          : 1px solid #2a2d33;
+    border-radius   : 12px;
+    padding         : 16px 20px;
+    font-weight     : 500;
+    font-size       : 1rem;
+    transition      : all 0.2s ease-in-out;
+    cursor          : default;
+    text-align      : center;
+  }
+  
+  .card-modulo:hover {
+    color           : #fff;
+    background-color: #114a79;
+    border-color    : #222529;
+    transform       : translateY(-3px);
+    box-shadow      : 0 4px 12px rgba(14, 78, 131, 0.2);
+  }
+}

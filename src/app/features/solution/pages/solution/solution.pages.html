@@ -1,0 +1,23 @@
+<solution-header />
+<wrapper-main-shared>
+    <div class="text-contact">
+        Aumente sua eficiência operacional e produtividade com softwares completos para gestão e automação de processos
+    </div>
+    <router-outlet />
+    <daisy-hero-ui o_minHeight="min-h-75">
+        <header class="text-center lg:text-right">
+            <h1 #view_integration class="text-4xl">Soluções integradas ao
+                <strong>
+                    <a [routerLink]="'/'+routes.solution+'/'+ routes.solution_child_fantury+ '/'+routes.content"
+                        [fragment]="idValue.solution">
+                        Fantury ERP
+                    </a>
+                </strong>
+            </h1>
+        </header>
+    </daisy-hero-ui>
+    @defer (on viewport(view_integration)) {
+    <solution-integrations />
+    }
+    <solution-video />
+</wrapper-main-shared>

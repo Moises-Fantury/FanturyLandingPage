@@ -1,0 +1,31 @@
+<daisy-hero-ui o_bgBase="bg-base-100" o_minHeight="min-h-150">
+    <daisy-hero-content o_hero-content_class="flex-col lg:flex-row-reverse">
+        <div class="flex-col">
+            <div class="box-container gap-4">
+                @for (card of cardData; track card.frontTitle) {
+                <div class="box-item">
+                    <div class="flip-box" [class.flipped]="card.isFlipped()">
+                        <div class="flip-box-front text-center"
+                               [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(' + card.image + ')'">
+                            <div class="inner color-white">
+                                <h3 class="flip-box-header">{{card.frontTitle}}</h3>
+                                <p>{{card.frontDescription}}</p>
+                                <img src="https://s25.postimg.cc/65hsttv9b/cta-arrow.png" alt="" class="flip-box-img" (click)="card.isFlipped.set(true)">
+                            </div>
+                        </div>
+                        <div class="flip-box-back text-center" 
+                            [style.background-image]="'linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(' + card.image + ')'">
+                            <div class="inner color-white">
+                                <h3 class="flip-box-header">{{card.backTitle}}</h3>
+                                <p>{{card.backDescription}}</p>
+                                <button class="flip-box-button" [routerLink]="card.route" [fragment]="card.fragment" >Saiba mais</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+           
+        </div>
+    </daisy-hero-content>
+</daisy-hero-ui>

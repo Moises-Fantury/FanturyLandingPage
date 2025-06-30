@@ -1,0 +1,36 @@
+:host {
+  display     : block;
+  position    : absolute;
+  color       : #ffffff;
+  padding-left: 70px;
+  margin-top  : 8.5%;
+  text-align  : center;
+
+  h2 {
+    font-family    : Arial;
+    text-decoration: none;
+    line-height    : clamp(5px, 4vw, 48px);
+    font-weight    : 300;
+    font-size      : clamp(25px, 3vw, 45px);
+    text-shadow    : 5px 5px 15px black;
+  }
+
+  h3 {
+    font-family    : Arial;
+    text-decoration: none;
+    line-height    : clamp(5px, 2.5vw, 24x);
+    font-weight    : 300;
+    font-size      : clamp(11px, 2vw, 24px);
+    text-shadow    : 5px 5px 15px black;
+  }
+
+
+  strong {
+    font-family   : Verdana, Geneva, Tahoma, sans-serif;
+    line-height   : clamp(5px, 4vw, 48px);
+    font-size     : clamp(25px, 3vw, 45px);
+    text-align    : left;
+    letter-spacing: 0px;
+    font-weight   : 700;
+  }
+}

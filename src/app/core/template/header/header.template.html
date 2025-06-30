@@ -1,0 +1,22 @@
+<header>
+    @if (layout.layoutDesktop()) {
+    <nav class="navbar row column-xs justify-content-evenly">
+        <div class="item-10-xl item-11-lg item-11-md item-sm item-xs item-11-tp item-11-tl row align-item-6">
+            <header-logo class="item-3-xl item-3-lg item-2-md item-3-sm item-xs" />
+            <header-nav class="item" />
+            <template-theme class="item-1" />
+        </div>
+        <div class="item-10-xl item-10-lg item-11-md item-sm item-11-xs item-11-tp item-11-tl row align-item-6 nav-fixed"
+            [class.visible]="loader()">
+            <header-logo class="item-3-xl item-3-lg item-3-md item-3-sm item-xs" />
+            <header-nav class="item" />
+            <template-theme class="item-1" />
+        </div>
+    </nav>
+    }
+    @if (layout.layoutMobile()) {
+    <nav class="column-xs">
+        <header-nav class="item" />
+    </nav>
+    }
+</header>

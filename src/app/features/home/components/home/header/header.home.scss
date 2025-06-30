@@ -1,0 +1,17 @@
+:host {
+  display       : flex;
+  flex-direction: row;
+  height: 507px;
+  @media (max-width: 599px){
+    height: 120px;
+  }
+  @media (min-width: 1448px) and (max-width: 1710px){
+    height: 415px;
+  }
+  @media (min-width: 1020px) and (max-width: 1447.00px){
+    height: 350px;
+  }
+  @media (min-width: 600px) and (max-width: 1020px){
+    height: 260px;
+  }
+}

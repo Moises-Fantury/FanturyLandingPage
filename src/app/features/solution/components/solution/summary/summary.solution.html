@@ -1,0 +1,65 @@
+<daisy-hero-ui o_bgBase="bg-base-300" o_minHeight="min-h-200">
+    <daisy-hero-content o_hero-content_class=" flex-col lg:flex-row-reverse" class="fade-in" [class.loaded]="loader()">
+        <header class="text-center w-100 lg:text-right">
+            <h1 class="text-4xl">Soluções</h1>
+            <p class="py-6 ">
+                A Fantury oferece soluções de Gestão Empresarial, com conjuntos
+                de ferramentas que juntas, otimizado, potencializam a gestão empresarial da sua empresa.
+            </p>
+            <button class="btn f-btn" [routerLink]="'/'+route.solution+'/'+route.solution_child_fantury" [fragment]="idValue.solution">Conheça todas as soluções</button>
+        </header>
+        <div class="row column-tp gap w-full">
+            <daisy-card-ui class="item" o_class="bg-base-100 shadow-md text-justify" o_titleCard="Fantury ERP"
+                o_textCard="O software Fantury ERP é a solução segura para destacar o seu negócio em um mercado competitivo, de forma planejada e efetiva."
+                (event-click)="routeNavigate(route.solution+'/'+route.solution_child_fantury, idValue.solution)"
+                >                
+                <figure>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-50 -30 350 350">
+                        <rect width="350" height="350" fill="none" />
+                        <rect x="32" y="48" width="192" height="144" rx="16" transform="translate(256 240) rotate(180)"
+                            fill="none" stroke="#006cb8" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="16" />
+                        <line x1="160" y1="224" x2="96" y2="224" fill="none" stroke="#006cb8" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                        <line x1="32" y1="152" x2="224" y2="152" fill="none" stroke="#006cb8" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                        <line x1="128" y1="192" x2="128" y2="224" fill="none" stroke="#006cb8" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                    </svg>
+                </figure>
+            </daisy-card-ui>
+            <daisy-card-ui class="item" o_class="bg-base-100 shadow-md text-justify" o_titleCard="Fantury Frente de Loja"
+                o_textCard="Integrado com: Balança (Checkout), Orçamento, Pré-Venda, Pedido de Venda, Transferência Eletrônica de Fundos (TEF) e Sistema de Retaguarda."
+                (event-click)="routeNavigate(route.solution+'/'+route.pdv, idValue.pdv)">
+                <figure>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 -65 400 400">
+                        <rect width="256" height="256" fill="none" />
+                        <path d="M188,184H91.17a16,16,0,0,1-15.74-13.14L48.73,24H24" fill="none" stroke="#006cb8"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                        <circle cx="92" cy="204" r="20" fill="none" stroke="#006cb8" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                        <circle cx="188" cy="204" r="20" fill="none" stroke="#006cb8" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                        <path d="M70.55,144H196.1a16,16,0,0,0,15.74-13.14L224,64H56" fill="none" stroke="#006cb8"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                    </svg>
+                </figure>
+            </daisy-card-ui>
+            <daisy-card-ui class="item" o_class="bg-base-100 shadow-md text-justify" o_titleCard="Fantury Mobile"
+                o_textCard="O aplicativo de Fantury Mobile é executado em equipamento autônomo, independente de conexões com a matriz ou filial"
+                (event-click)="routeNavigate(route.solution+'/'+route.mobile, idValue.mobile)">
+                <figure>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-75 -60 400 400">
+                        <rect width="256" height="256" fill="none" />
+                        <rect x="64" y="24" width="128" height="208" rx="16" fill="none" stroke="#006cb8"
+                            stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                        <line x1="64" y1="56" x2="192" y2="56" fill="none" stroke="#006cb8" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                        <line x1="64" y1="200" x2="192" y2="200" fill="none" stroke="#006cb8" stroke-linecap="round"
+                            stroke-linejoin="round" stroke-width="16" />
+                    </svg>
+                </figure>
+            </daisy-card-ui>
+        </div>
+    </daisy-hero-content>
+</daisy-hero-ui>

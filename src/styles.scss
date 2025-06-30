@@ -1,0 +1,85 @@
+/* You can add global styles to this file, and also import other style files */
+@import "tailwindcss";
+
+@plugin "daisyui" {
+    themes: light --default, dark, aqua;
+}
+
+;
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin     : 0;
+    font-family: 'Roboto' sans-serif !important;
+}
+
+/* Opção 2: Usando uma classe diretamente na imagem */
+.fade-in {
+    opacity: 0;
+    /* Define a imagem inicialmente como transparente */
+    /* Adiciona uma transição suave na propriedade opacity */
+}
+
+.fade-in.loaded {
+    opacity   : 1;
+    transition: opacity 1s ease-in-out;
+    /* Define a imagem como totalmente visível quando a classe 'loaded' é adicionada */
+}
+
+[data-theme="light"] {
+    .nav-fixed {
+        background-color: #fafafa;
+    }
+
+    .nav-text {
+        color          : #555555;
+        line-height    : 14px;
+        font-weight    : 400;
+        letter-spacing : 1px;
+        text-transform : none;
+        text-decoration: none;
+        cursor         : pointer;
+    }
+}
+
+[data-theme="dark"] {
+    .nav-fixed {
+        background-color: #282d33 !important;
+    }
+
+    .nav-text {
+        color          : #ecf9ff;
+        line-height    : 14px;
+        font-weight    : 400;
+        letter-spacing : 1px;
+        text-transform : none;
+        text-decoration: none;
+        cursor         : pointer;
+    }
+}
+
+[data-theme="aqua"] {
+    .nav-fixed {
+        background-color: #28449b !important;
+    }
+
+    .nav-text {
+        color          : #b8e6fe;
+        line-height    : 14px;
+        font-weight    : 400;
+        letter-spacing : 1px;
+        text-transform : none;
+        text-decoration: none;
+        cursor         : pointer;
+    }
+}
+
+.f-btn {
+    color           : #fff;
+    background-color: #0d5db3;
+    cursor          : pointer;
+}

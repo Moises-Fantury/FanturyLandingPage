@@ -1,0 +1,13 @@
+@defer (on timer(1300)) {
+    <figure [style]="stylePadding()">
+        @if (theme() == 'light') {
+            <a href="https://www.fantury.com.br">
+                <img src="./assets/image/logo.png" alt="fantury-logo" [style]="stylePadding()">
+            </a>
+        }@else {
+            <a href="https://www.fantury.com.br">
+                <img src="./assets/image/logo-branco.png" alt="fantury-logo-branco" [style]="stylePadding()" width="170" height="45">
+            </a>
+        }
+    </figure>
+}

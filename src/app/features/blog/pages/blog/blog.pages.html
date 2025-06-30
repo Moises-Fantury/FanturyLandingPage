@@ -1,0 +1,13 @@
+<blog-header/>
+<daisy-list-ui class="p-container" r_title="Últimas Notícias">
+  @for (newItem of news(); track newItem.id) {
+    <a daisy-list-child [href]="'https://help.fanturyerp.com.br/#/detailnews/' + newItem.id" target="_blank" rel="noopener noreferrer">
+      <daisy-list-child
+      [r_imgSrc]="newItem.image"
+      [r_authorNews]="newItem.authorUser"
+      [r_titleNews]="newItem.title"
+      [r_textNews]="newItem.subTitle"
+      />    
+    </a>
+  }
+</daisy-list-ui>

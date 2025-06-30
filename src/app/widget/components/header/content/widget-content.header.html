@@ -1,0 +1,15 @@
+@if (layout.layoutDesktop()) {
+<h2 class="fade-in" [class]="{'loaded': loader()}">
+    <ng-content select="[text]"></ng-content>
+    <strong>
+        <ng-content select="[text-emp]"></ng-content>
+    </strong>
+</h2>
+<h3 class="fade-in" [class]="{'loaded': loader()}">
+    <ng-content select="[text-small]"></ng-content>
+</h3>
+
+<aside class="p-4">
+    <ng-content select="[button-action]"></ng-content>
+</aside>
+}

@@ -1,0 +1,22 @@
+:host {
+  display: block;
+
+  .header-button {
+    padding      : 1px 48px;
+    background   : #007aff;
+    font-size    : clamp(13px, 1vw, 19px);
+    font-weight  : 600;
+    font-family  : Roboto;
+    line-height  : 48px;
+    color        : #ffffff;
+    border       : none;
+    border-radius: 5px;
+    box-shadow   : rgb(38, 57, 77) 0px 20px 30px -10px;
+    cursor       : pointer;
+  }
+
+  .header-button:hover {
+    background: #298efa;
+  }
+  
+}

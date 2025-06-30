@@ -1,0 +1,24 @@
+:host {
+  display: block;
+
+  .nav-fixed {
+    width           : 97%;
+    position        : fixed;
+    top             : -60px;
+    /* Inicialmente posicionada acima da tela */
+    z-index         : 999;
+    border-radius   : 99px;
+    opacity         : 0;
+    box-shadow      : rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    background-color: #fff;
+  }
+
+  /* Classe para ativar a animação quando a página carregar ou quando desejado */
+  .nav-fixed.visible {
+    opacity   : 1;
+    top       : 15px;
+    transition: top 0.5s ease-in-out;
+    /* Posição final desejada */
+  }
+
+}

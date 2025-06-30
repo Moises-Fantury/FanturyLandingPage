@@ -1,0 +1,80 @@
+<div class="fade-in" [class.loaded]="loader()">
+    <daisy-hero-ui o_bgBase="bg-base-300" o_minHeight="175">
+        <daisy-hero-content o_hero-content_class="flex-col">
+
+            <daisy-card-ui o_class="bg-base-300 text-justify" o_titleCard="Setores Produtivos" o_textCard="O Fantury ERP compreende um conjunto de ferramentas que atende empresas de diversos setores
+            produtivos, de pequeno a grande porte, incluindo comércio, indústria e prestadoras de serviços. O
+            software Fantury ERP adapta-se facilmente às características e necessidades de cada empresa,
+            processando, armazenando e gerenciando uma grande variedade de informações." o_textSizeCard="text-lg"
+                [o_btnHidden]="true" />
+
+            <daisy-card-ui o_class="bg-base-300 text-justify" o_titleCard="Segurança"
+                o_textCard="As permissões de acesso aos dados garantem a segurança e o sigilo das informações. Diversas formas de visualização do conteúdo transformam o Fantury ERP em um poderoso instrumento de apoio gerencial para a sua empresa, num mundo onde a informação rápida e precisa é cada vez mais fundamental. Os dados atualizados constantemente permitem posicionamentos recentes e confiáveis e maior tranquilidade no planejamento das ações."
+                o_textSizeCard="text-lg" [o_btnHidden]="true" />
+
+        </daisy-hero-content>
+    </daisy-hero-ui>
+    <daisy-hero-ui o_bgBase="bg-base-200" o_minHeight="min-h-25">
+
+        <daisy-hero-content o_hero-content_class="text-center">
+            <div class="max-w-xl">
+                <h1 class="text-2xl">Módulos o que você encontra no <strong class="text-3xl">Fantury ERP</strong></h1>
+            </div>
+        </daisy-hero-content>
+    </daisy-hero-ui>
+    <daisy-hero-ui o_bgBase="bg-base-200" o_minHeight="min-h-10">
+        <daisy-hero-content>
+            <ui-card-mini [r_list]="modules" />
+        </daisy-hero-content>
+    </daisy-hero-ui>
+    <daisy-hero-ui o_bgBase="bg-base-200" o_minHeight="min-h-10">
+        <daisy-hero-content>
+            <ui-cards-group o_titleMain="Características" [o_showAll]="false" [o_btnShow]="true"
+                [r_cardsGroup]="cards" />
+        </daisy-hero-content>
+    </daisy-hero-ui>
+
+    <section class="bg-base-200  py-16 px-6 lg:px-24" [style.font-size]="'18px'">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6">Muito mais do que um ERP</h2>
+            <p class="text-lg  mb-8">
+                O <strong class="">Fantury ERP</strong> vai além das funcionalidades tradicionais de um sistema de
+                gestão. Ele foi projetado para atender às necessidades específicas de negócios modernos que buscam
+                agilidade, segurança e inteligência na tomada de decisões.
+            </p>
+            <p class="text-lg  mb-8">
+                Com uma base sólida de <span class=" font-medium">recursos integrados</span> — desde o controle
+                financeiro e fiscal até o acompanhamento de produção, estoque e vendas — o Fantury proporciona uma <span
+                    class=" font-medium">visão 360º da operação</span> da sua empresa, em tempo real.
+            </p>
+
+            <div class="grid md:grid-cols-2 gap-6 text-left  mb-10">
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Automatize processos e reduza retrabalhos</li>
+                    <li>Personalize regras de negócio com flexibilidade</li>
+                    <li>Fortaleça o relacionamento com seus clientes</li>
+                    <li>Gere relatórios estratégicos e indicadores visuais</li>
+                </ul>
+                <ul class="list-disc list-inside space-y-2">
+                    <li>Conte com segurança avançada e controle de acessos</li>
+                    <li>Esteja em conformidade com as obrigações fiscais</li>
+                    <li>Tenha suporte próximo de quem entende seu negócio</li>
+                    <li>Atualizações contínuas e melhorias constantes</li>
+                </ul>
+            </div>
+
+            <p class="text-xl  font-semibold">
+                <span class="text-xl font-bold">Fantury ERP</span> é mais do que um sistema:<br />
+                é o seu parceiro na evolução da sua empresa.
+            </p>
+
+
+            <div class="mt-10">
+                <a a href="https://wa.me/557388610165" target="_blank" rel="noopener noreferrer"
+                    class="inline-block bg-primary  py-3 px-6 rounded-xl text-lg font-semibold hover:bg-opacity-80 transition f-btn">
+                    Fale com um especialista
+                </a>
+            </div>
+        </div>
+    </section>
+</div>

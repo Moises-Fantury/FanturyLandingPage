@@ -1,0 +1,1 @@
+export const DEFAULT_ICON = 'https://s25.postimg.cc/65hsttv9b/cta-arrow.png';

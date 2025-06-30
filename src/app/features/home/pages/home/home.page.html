@@ -1,0 +1,17 @@
+<header-home />
+<wrapper-main-shared>
+   <about-summary/>
+   @defer(on viewport(view_solution)){
+      <solution-summary/>
+   }
+   <span #view_solution></span>  
+   @defer(on viewport(view_differential)){
+      <about-differential/>
+   }
+   <span #view_differential></span>
+   @defer(on viewport(view_contact)){
+      <contact-form/>
+      <app-google-maps/>
+   }
+   <span #view_contact></span>
+</wrapper-main-shared>

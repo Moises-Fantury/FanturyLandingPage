@@ -1,0 +1,7 @@
+<button 
+class="header-button f-btn fade-in"
+[class.loaded]="loader()"
+(click)="click_event.emit()"
+>
+    <ng-content></ng-content>
+</button>

@@ -1,0 +1,25 @@
+<daisy-hero-ui o_minHeight="min-h-70">
+  <header class="text-center">
+    <h1 #view_integration class="text-4xl">Saiba mais por <strong>Vídeos</strong></h1>
+  </header>
+</daisy-hero-ui>
+
+<div class="max-w-4xl mx-auto">
+  <div class="flex gap-4 overflow-hidden">
+    @for (card of visibleCards(); track $index) {
+    <div class="rounded-2xl overflow-hidden" [class]="classChanges()">
+      <a [href]="card.url" target="_blank" class="block hover:shadow-xl transition-shadow">
+        <img [src]="card.image" alt="{{ card.title }}" class="w-full aspect-video object-cover rounded-2xl" />
+      </a>
+      <div class="p-2 text-center font-semibold">
+        {{ card.title }}
+      </div>
+    </div>
+    }
+  </div>
+
+  <div class="flex justify-center gap-4 mb-4 mt-2 w-full">
+    <button (click)="prev()" class="btn btn-circle"><i class="ph-bold ph-arrow-left"></i></button>
+    <button (click)="next()" class="btn btn-circle"><i class="ph-bold ph-arrow-right"></i></button>
+  </div>
+</div>

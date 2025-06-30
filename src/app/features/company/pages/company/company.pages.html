@@ -1,0 +1,16 @@
+<company-header />
+<wrapper-main-shared>        
+    <company-description />    
+    @defer (on viewport(view_mission)) {
+        <company-history />
+    }
+    <span #view_history></span>
+    @defer (on viewport(view_mission)) {
+        <company-mission />
+    }
+    <span #view_mission></span>
+    @defer (on viewport(view_timeline)) {
+        <company-timeline/>
+    }
+    <span #view_timeline></span>    
+</wrapper-main-shared>
