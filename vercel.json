@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "public": true,
+  "name": "fantury-landing-page",
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api" }
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/fantury-landing-page/**"
+    }
+  }
+}
