@@ -3,13 +3,14 @@ import { BLOG_ROUTES } from '@features/blog/routes/blog-routes.route';
 import { COMPANY_ROUTES } from '@features/company/routes/company-routes.route';
 import { CONTACT_ROUTES } from '@features/contact/routes/contact-routes.router';
 import { CUSTOMECENTER_ROUTES } from '@features/customer-center/routes/customer-center-routes.router';
+import { HomePage } from '@features/home/pages/home/home.page';
 import { HOME_ROUTES } from '@features/home/routes/home.routes';
 import { PARTNER_ROUTES } from '@features/partner/routes/partner.routes';
 import { SOLUTION_ROUTES } from '@features/solution/routes/solution-routes.router';
 import { NotFoundPages } from '@shared/components/pages/not-found/not-found.pages';
 
 export const routes: Routes = [
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: '',  pathMatch: 'full', component:  HomePage},
     ...HOME_ROUTES,
     ...COMPANY_ROUTES,
     ...CONTACT_ROUTES,
