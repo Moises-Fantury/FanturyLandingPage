@@ -1,5 +1,5 @@
 export const ROUTER_SYSTEM = {
-    home: 'home',
+    home: '',
     company: 'sobre',
     contact: 'contato',
     customerCenter: 'central-do-cliente',
